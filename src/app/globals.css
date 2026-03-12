@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: #1e3a8a; /* Deep Royal Blue */
+  --color-primary-hover: #172554;
+  --color-secondary: #0891b2; /* Cyan/Teal */
+  --color-accent: #f59e0b; /* Amber/Gold for academic highlights */
+  --color-navy: #0f172a; /* Slate 900 */
+  --color-navy-light: #1e293b;
+  --color-bg-light: #f8fafc;
+  --color-bg-muted: #f1f5f9;
+  --color-text-dark: #0f172a;
+  --color-text-body: #334155;
+  --color-text-muted: #64748b;
+  --color-border-light: #e2e8f0;
+  
+  --font-heading: var(--font-playfair), serif; /* Elegant Serif */
+  --font-body: var(--font-dm-sans), sans-serif; /* Clean Modern Sans */
+  --font-modern: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-garamond: var(--font-eb-garamond), serif; /* Classical Academic */
+  --font-grotesk: var(--font-space-grotesk), sans-serif; /* Technical Modern */
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text-dark);
+    background: #ffffff;
+  }
+}
+
+@keyframes chemFloat {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(50px, -30px) rotate(90deg);
+  }
+  50% {
+      transform: translate(20px, -60px) rotate(180deg);
+  }
+  75% {
+      transform: translate(-30px, -30px) rotate(270deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
