@@ -110,7 +110,7 @@ export default function MentorshipPage() {
             Guiding the Next <span className="font-medium text-slate-800">Generation</span>
           </h1>
           <p className="font-sans text-lg md:text-xl text-slate-600 font-light leading-relaxed max-w-2xl mx-auto">
-            Supervising and mentoring doctoral candidates and master's students in advanced chemical research and materials science.
+            Supervising and mentoring doctoral candidates and master&apos;s students in advanced chemical research and materials science.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-6 mt-12 w-full max-w-2xl">
@@ -192,7 +192,7 @@ export default function MentorshipPage() {
                       <Certificate size={14} /> Thesis Title
                     </p>
                     <p className="font-sans text-sm md:text-base text-slate-700 leading-relaxed font-medium">
-                      "{student.thesis}"
+                      &quot;{student.thesis}&quot;
                     </p>
                   </div>
                 )}
@@ -211,7 +211,7 @@ export default function MentorshipPage() {
       {/* Masters Section */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 pb-32 relative z-10">
         <div className="mb-12 flex items-center gap-4">
-          <h2 className="font-serif text-3xl font-medium text-slate-900">Master's Dissertations</h2>
+          <h2 className="font-serif text-3xl font-medium text-slate-900">Master&apos;s Dissertations</h2>
           <div className="h-px flex-1 bg-slate-200" />
         </div>
 

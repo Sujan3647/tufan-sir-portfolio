@@ -1,12 +1,9 @@
 "use client";
 
 import React from "react";
-import {
-  EnvelopeSimple as EnvelopeSimpleIcon,
-  ArrowRight as ArrowRightIcon,
-  GraduationCap as GraduationCapIcon
-} from "@phosphor-icons/react";
+import { EnvelopeSimple as EnvelopeSimpleIcon } from "@phosphor-icons/react";
 import AnimatedChemBackground from "@/components/hero/AnimatedChemBackground";
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
@@ -23,10 +20,13 @@ export default function HeroSection() {
             <div className="relative group">
               <div className="absolute -inset-1 bg-linear-to-tr from-primary via-secondary to-primary rounded-2xl opacity-75 blur lg:opacity-100 transition duration-1000 group-hover:duration-200"></div>
               <div className="relative aspect-3/4 w-64 md:w-72 lg:w-80 overflow-hidden rounded-xl bg-gray-100 ring-1 ring-gray-900/10 shadow-2xl">
-                <img
+                <Image
                   src="/tufanprofile.png"
                   alt="Dr. Tufan Singha Mahapatra"
+                  width={320}
+                  height={400}
                   className="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  priority
                 />
               </div>
             </div>
@@ -67,19 +67,19 @@ export default function HeroSection() {
 
               {/* Social Icons */}
               <a href="mailto:tufansmp@gmail.com" className="group w-11 h-11 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:border-red-200 hover:shadow-md hover:shadow-red-50 hover:-translate-y-1 transition-all duration-300" title="Gmail">
-                 <img src="/logos/email.jpeg" alt="Gmail" className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
+                 <Image src="/logos/email.jpeg" alt="Gmail" width={24} height={24} className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
               </a>
 
               <a href="https://www.linkedin.com/in/dr-tufan-singha-mahapatra-292a69a4/" target="_blank" rel="noopener noreferrer" className="group w-11 h-11 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:border-[#0a66c2]/30 hover:shadow-md hover:shadow-blue-50 hover:-translate-y-1 transition-all duration-300" title="LinkedIn">
-                 <img src="/logos/linkedinlogo.png" alt="LinkedIn" className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
+                 <Image src="/logos/linkedinlogo.png" alt="LinkedIn" width={24} height={24} className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
               </a>
 
               <a href="https://orcid.org/0000-0002-2839-9688" target="_blank" rel="noopener noreferrer" className="group w-11 h-11 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:border-[#a6ce39]/40 hover:shadow-md hover:shadow-green-50 hover:-translate-y-1 transition-all duration-300" title="ORCID">
-                 <img src="/logos/orcidlogo.png" alt="ORCID" className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
+                 <Image src="/logos/orcidlogo.png" alt="ORCID" width={24} height={24} className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
               </a>
 
               <a href="https://scholar.google.com/citations?user=3lFKhPkAAAAJ" target="_blank" rel="noopener noreferrer" className="group w-11 h-11 flex items-center justify-center rounded-full bg-white border border-slate-200 hover:border-[#4285f4]/30 hover:shadow-md hover:shadow-blue-50 hover:-translate-y-1 transition-all duration-300" title="Google Scholar">
-                 <img src="/logos/google-scholar.png" alt="Google Scholar" className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
+                 <Image src="/logos/google-scholar.png" alt="Google Scholar" width={24} height={24} className="w-6 h-6 object-contain transition-transform group-hover:scale-110" />
               </a>
             </div>
 

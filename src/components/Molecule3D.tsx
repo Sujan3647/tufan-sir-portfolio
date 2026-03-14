@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { Sphere, Cylinder } from "@react-three/drei";
+import { Sphere } from "@react-three/drei";
 import * as THREE from "three";
 
 function Atom({ position, color, radius = 1 }: { position: [number, number, number], color: string, radius?: number }) {

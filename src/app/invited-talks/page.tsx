@@ -2,7 +2,7 @@
 
 import React from "react";
 import Header from "@/components/Header";
-import { MicrophoneStage, MapPin, CalendarBlank, Buildings, PresentationChart } from "@phosphor-icons/react";
+import { MicrophoneStage, CalendarBlank, Buildings, PresentationChart } from "@phosphor-icons/react";
 
 const talks = [
   {

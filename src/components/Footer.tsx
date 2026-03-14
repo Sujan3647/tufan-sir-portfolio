@@ -1,9 +1,9 @@
 import React from "react";
 
 const socialLinks = [
-  { label: "Twitter", href: "#" },
-  { label: "GitHub", href: "#" },
-  { label: "ResearchGate", href: "#" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/dr-tufan-singha-mahapatra-292a69a4/" },
+  { label: "Google Scholar", href: "https://scholar.google.com/citations?user=3lFKhPkAAAAJ" },
+  { label: "ORCID", href: "https://orcid.org/0000-0002-2839-9688" },
 ];
 
 export default function Footer() {
@@ -13,21 +13,12 @@ export default function Footer() {
         {/* Left */}
         <div>
           <div className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-white">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                <rect x="2" y="2" width="6" height="6" rx="1" fill="white" />
-                <rect x="10" y="2" width="6" height="6" rx="1" fill="white" opacity="0.6" />
-                <rect x="2" y="10" width="6" height="6" rx="1" fill="white" opacity="0.6" />
-                <rect x="10" y="10" width="6" height="6" rx="1" fill="white" opacity="0.4" />
-              </svg>
-            </div>
             <span className="text-base font-semibold text-text-dark">
-              Dr. Julian Thorne
+              Dr. Tufan Singha Mahapatra
             </span>
           </div>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-primary">
-            Leading the next generation of cybersecurity research through
-            quantum-enhanced methodologies.
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-600">
+            Assistant Professor of Chemistry, ICFAI University Tripura. Exploring Supramolecular Chemistry and Materials Science.
           </p>
         </div>
 
@@ -45,7 +36,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="mt-3 text-xs text-text-muted">
-            © 2024 Dr. Julian Thorne. All Rights Reserved.
+            © {new Date().getFullYear()} Dr. Tufan Singha Mahapatra. All Rights Reserved.
           </p>
         </div>
       </div>

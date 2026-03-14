@@ -95,7 +95,7 @@ export default function Header() {
               <a
                 href={link.href}
                 className={`font-modern flex items-center justify-between text-xl font-bold text-navy hover:text-primary pl-4 border-l-4 transition-all tracking-tight ${link.subLinks ? 'border-transparent' : 'border-transparent hover:border-primary'}`}
-                onClick={(e) => {
+                onClick={() => {
                   if(!link.subLinks) setIsMenuOpen(false);
                 }}
               >

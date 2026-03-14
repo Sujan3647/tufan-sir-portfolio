@@ -1,6 +1,6 @@
 import React from "react";
 import AboutChemAnimation from "./about/AboutChemAnimation";
-import { Atom, Article, ShieldCheck, Books, UsersThree, Lightbulb } from "@phosphor-icons/react/dist/ssr";
+import { Atom, Article, Lightbulb } from "@phosphor-icons/react/dist/ssr";
 
 export default function BioSection() {
   return (

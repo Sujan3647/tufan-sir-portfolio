@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Header from "@/components/Header";
-import { GraduationCap, ArrowUpRight } from "@phosphor-icons/react";
+// Removed unused phosphor icons imports
 
 const phdPublications = [
   {
