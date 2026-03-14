@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${ebGaramond.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${playfair.variable} ${dmSans.variable}`}>
-      <body className="antialiased font-sans">{children}</body>
+      <body className="antialiased font-sans overflow-x-hidden max-w-[100vw] text-slate-900 bg-[#fafafc] selection:bg-indigo-100 selection:text-indigo-900">
+        {children}
+      </body>
     </html>
   );
 }

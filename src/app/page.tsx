@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import NewsBanner from "@/components/NewsBanner";
 import BioSection from "@/components/BioSection";
 import EducationSection from "@/components/EducationSection";
+import PublicationsSection from "@/components/PublicationsSection";
 import ChemicalBackground from "@/components/ChemicalBackground";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <NewsBanner />
       <BioSection />
       <EducationSection />
+      <PublicationsSection />
     </div>
   );
 }

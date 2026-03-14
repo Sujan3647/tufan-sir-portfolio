@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { Trophy } from "@phosphor-icons/react/dist/ssr";
+import AboutChemAnimation from "./about/AboutChemAnimation";
+import EduMathChemAnimation from "./about/EduMathChemAnimation";
 
 const qualifications = [
   {
@@ -83,12 +85,18 @@ export default function EducationSection() {
           1. PROFESSIONAL EXPERIENCE SECTION
           ========================================= */}
       <section
-        className="relative overflow-hidden bg-white py-24 md:py-32"
+        className="relative overflow-hidden bg-white/80 backdrop-blur-sm py-24 md:py-32"
         id="experience"
       >
+        {/* Detailed chemistry floating animation */}
+        <AboutChemAnimation />
+
+        {/* Decorative architectural line */}
+        <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-slate-300 to-transparent opacity-50" />
+
         {/* Soft Modern Ambient Background */}
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-200 h-150 bg-indigo-50/50 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-150 h-150 bg-sky-50/50 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-200 h-150 bg-indigo-50/50 rounded-full blur-[120px] pointer-events-none z-[-1]" />
+        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-150 h-150 bg-sky-50/50 rounded-full blur-[120px] pointer-events-none z-[-1]" />
         
         <div className="mx-auto max-w-7xl px-6 relative z-10">
           
@@ -104,44 +112,71 @@ export default function EducationSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Advanced Professional Experience Layout */}
+          <div className="mx-auto max-w-5xl relative mt-16 space-y-8 md:space-y-12">
+            
+            {/* Subtle Timeline Track */}
+            <div className="absolute left-[39px] md:left-12 top-10 bottom-10 w-[2px] bg-linear-to-b from-indigo-200/50 via-slate-200/50 to-emerald-200/50 hidden md:block z-0" />
+
             {experience.map((exp, idx) => (
               <div 
                 key={idx} 
-                className="group relative bg-white rounded-3xl p-8 border border-slate-200/60 shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] transition-all duration-500 overflow-hidden flex flex-col h-full hover:-translate-y-1"
+                className="group relative flex flex-col md:flex-row items-stretch gap-6 md:gap-10 z-10"
               >
-                {/* Subtle gradient overlay on hover */}
-                <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-700 bg-linear-to-br from-transparent to-black ${exp.bgClass}`} />
-                
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="flex justify-between items-start mb-8">
-                    <div className="relative h-16 w-16 rounded-2xl bg-white p-2 ring-1 ring-slate-100 shadow-sm group-hover:scale-110 transition-transform duration-500">
-                      <Image
-                        src={exp.logo}
-                        alt={exp.institution}
-                        fill
-                        className="object-contain p-1.5"
-                      />
+                {/* Timeline Node - Desktop only */}
+                <div className="hidden md:flex flex-col items-center pt-8 relative z-10 w-24 shrink-0">
+                   <div className="w-[18px] h-[18px] rounded-full bg-white border-[4px] border-slate-200 group-hover:border-indigo-400 group-hover:scale-125 transition-all duration-500 shadow-[0_0_15px_rgba(0,0,0,0.05)] group-hover:shadow-[0_0_20px_rgba(99,102,241,0.2)]" />
+                   {/* Vertical connecting line for nodes, hidden on last item */}
+                   {idx !== experience.length - 1 && (
+                     <div className="w-px h-full bg-slate-200/50 mt-4 group-hover:bg-indigo-300/40 transition-colors duration-500" />
+                   )}
+                </div>
+
+                {/* Modern Content Card */}
+                <div className="flex-1 bg-white/70 backdrop-blur-xl rounded-3xl p-6 md:p-8 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] ring-1 ring-slate-900/5 hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] hover:ring-slate-900/10 hover:-translate-y-1 transition-all duration-500 overflow-hidden relative">
+                  
+                  {/* Decorative modern shape (Animated blob) */}
+                  <div className={`absolute -right-20 -top-20 w-64 h-64 bg-linear-to-br from-slate-100 to-white rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-1000 ease-out z-0 pointer-events-none ${exp.bgClass} mix-blend-multiply`} />
+
+                  <div className="relative z-10 flex flex-col lg:flex-row justify-between gap-8 lg:gap-12">
+                    
+                    {/* Left: Role and Metadata */}
+                    <div className="flex-1 flex flex-col justify-center">
+                      <div className="flex items-center gap-4 mb-5">
+                        <span className={`font-mono text-[10px] font-bold uppercase tracking-[0.2em] px-3.5 py-1.5 rounded-full ${exp.bgClass} ${exp.textClass} ring-1 ring-inset ring-current/20 shadow-xs bg-opacity-50`}>
+                          {exp.type}
+                        </span>
+                        <span className="font-mono text-xs font-semibold tracking-wider text-slate-400 uppercase flex items-center gap-2">
+                          <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-slate-400 transition-colors" />
+                          {exp.period}
+                        </span>
+                      </div>
+                      
+                      <h3 className="font-serif text-3xl font-medium text-slate-900 leading-tight mb-2 group-hover:text-slate-800 transition-colors">
+                        {exp.role}
+                      </h3>
                     </div>
-                    <span className={`font-mono text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full ${exp.bgClass} ${exp.textClass} ring-1 ring-inset ring-current/20`}>
-                      {exp.type}
-                    </span>
+
+                    {/* Right: Institution Details (Glassed inner container) */}
+                    <div className="flex items-center gap-5 lg:w-[45%] shrink-0 p-5 rounded-2xl bg-white/60 backdrop-blur border border-slate-100/80 shadow-xs group-hover:bg-white/90 group-hover:border-slate-200 transition-all duration-500">
+                      <div className="relative h-16 w-16 rounded-xl bg-white p-2.5 ring-1 ring-slate-100 shadow-sm shrink-0 group-hover:scale-110 group-hover:shadow-md transition-all duration-500">
+                        <Image
+                          src={exp.logo}
+                          alt={exp.institution}
+                          fill
+                          className="object-contain p-1"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-mono text-[9px] font-bold uppercase tracking-widest text-slate-400 mb-1">Institution</p>
+                        <p className="font-sans text-[16px] font-medium text-slate-800 leading-snug">
+                          {exp.institution}
+                        </p>
+                      </div>
+                    </div>
+
                   </div>
 
-                  <div className="space-y-4 grow">
-                    <span className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 font-mono tracking-widest uppercase">
-                      <span className="h-1.5 w-1.5 rounded-full bg-slate-300 group-hover:bg-indigo-400 transition-colors"></span>
-                      {exp.period}
-                    </span>
-                    <div>
-                      <h4 className="font-serif text-2xl font-medium text-slate-900 group-hover:text-slate-700 transition-colors leading-snug">
-                        {exp.role}
-                      </h4>
-                      <p className="mt-3 font-sans text-base font-light text-slate-600 leading-relaxed border-l-2 border-slate-100 pl-3">
-                        {exp.institution}
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}
@@ -154,11 +189,14 @@ export default function EducationSection() {
           2. EDUCATION & QUALIFICATIONS SECTION
           ========================================= */}
       <section
-        className="relative overflow-hidden bg-slate-50 py-24 md:py-32 border-t border-slate-200/50"
+        className="relative overflow-hidden bg-slate-50/80 backdrop-blur-sm py-24 md:py-32 border-t border-slate-200/50"
         id="education"
       >
+        {/* Animated Math and Chemistry Background Background */}
+        <EduMathChemAnimation />
+
         {/* Subtle Architectural Grid Pattern Background */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#slate-800/5_1px,transparent_1px),linear-gradient(to_bottom,#slate-800/5_1px,transparent_1px)] bg-size-[4rem_4rem] mask-[radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#slate-800/10_1px,transparent_1px),linear-gradient(to_bottom,#slate-800/10_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-20 pointer-events-none z-[-1]" />
 
         <div className="mx-auto max-w-7xl px-6 relative z-10">
           
@@ -172,87 +210,114 @@ export default function EducationSection() {
             </h2>
           </div>
 
-          {/* Centered National Rankings Banner */}
-          <div className="flex justify-center mb-20 relative">
-            <div className="inline-flex flex-col sm:flex-row items-center gap-6 bg-linear-to-br from-amber-50 to-orange-50/50 p-5 rounded-2xl border border-amber-200/60 shadow-sm relative overflow-hidden group hover:shadow-md transition-shadow">
-              <div className="absolute -left-4 -bottom-4 opacity-[0.04] transition-transform duration-700 group-hover:scale-110 pointer-events-none">
-                <Trophy size={140} weight="fill" className="text-amber-700" />
-              </div>
+          {/* Premium National Rankings Banner */}
+          <div className="flex justify-center mb-24 relative z-10">
+            <div className="relative overflow-hidden bg-slate-900 rounded-3xl p-1 w-full max-w-4xl shadow-[0_20px_40px_-12px_rgba(15,23,42,0.4)] group">
+              {/* Animated glowing border effect */}
+              <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgba(245,158,11,0.1)_0deg,rgba(245,158,11,0.5)_180deg,rgba(245,158,11,0.1)_360deg)] animate-[spin_4s_linear_infinite]" />
+              
+              <div className="relative bg-slate-900/95 backdrop-blur-sm rounded-[22px] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-8 h-full">
+                {/* Background graphic */}
+                <div className="absolute -left-12 -bottom-12 opacity-[0.03] transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12 pointer-events-none">
+                  <Trophy size={200} weight="fill" className="text-amber-500" />
+                </div>
 
-              <div className="flex items-center gap-3 bg-white/90 backdrop-blur-sm border border-amber-200/60 text-amber-700 px-5 py-3 rounded-xl shadow-xs relative z-10">
-                <Trophy size={24} weight="duotone" className="text-amber-500" />
-                <h4 className="font-serif text-lg font-medium text-slate-900">National Rankings</h4>
-              </div>
-
-              <div className="flex items-center gap-6 sm:gap-10 px-6 relative z-10">
-                {nationalRanks.map((rank) => (
-                  <div key={rank.exam} className="text-center sm:text-left flex flex-col justify-center">
-                    <p className="font-mono text-[10px] tracking-widest text-amber-700/80 uppercase font-bold mb-1">
-                      {rank.exam}
-                    </p>
-                    <p className="font-serif text-2xl md:text-3xl font-bold tracking-tight text-amber-900">
-                      {rank.rank}
-                    </p>
+                {/* Title */}
+                <div className="flex items-center gap-4 relative z-10 pl-2">
+                  <div className="h-12 w-12 rounded-full bg-amber-500/10 flex items-center justify-center border border-amber-500/20">
+                    <Trophy size={24} weight="duotone" className="text-amber-400" />
                   </div>
-                ))}
+                  <div>
+                    <h4 className="font-serif text-xl sm:text-2xl font-medium text-white tracking-wide">National Excellence</h4>
+                    <p className="font-mono text-[10px] text-amber-500/70 uppercase tracking-widest mt-0.5">Competitive Rankings</p>
+                  </div>
+                </div>
+
+                {/* Score Dividers */}
+                <div className="hidden md:block w-px h-16 bg-slate-800" />
+
+                {/* Ranks */}
+                <div className="flex items-center gap-8 sm:gap-16 relative z-10 pr-4">
+                  {nationalRanks.map((rank) => (
+                    <div key={rank.exam} className="text-center md:text-left flex flex-col justify-center">
+                      <p className="font-mono text-[11px] tracking-[0.2em] text-slate-400 uppercase font-bold mb-1.5 flex items-center justify-center md:justify-start gap-2">
+                        <span className="w-1 h-1 bg-amber-500 rounded-full" />
+                        {rank.exam}
+                      </p>
+                      <p className="font-serif text-3xl md:text-4xl font-light tracking-tight text-white group-hover:text-amber-400 transition-colors duration-500">
+                        {rank.rank}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Education Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Advanced Education Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-10 relative z-10">
             {qualifications.map((q, idx) => (
               <div 
                 key={idx} 
-                className="group relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all duration-500 hover:-translate-y-1 flex flex-col justify-between h-full ring-1 ring-slate-900/5 hover:ring-slate-900/10"
+                className="group relative bg-white/70 backdrop-blur-xl rounded-[2rem] p-8 border border-white shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] ring-1 ring-slate-900/5 hover:ring-slate-900/10 hover:-translate-y-2 transition-all duration-700 flex flex-col justify-between h-full overflow-hidden"
               >
-                <div>
-                  <div className="flex justify-between items-start mb-8">
-                    <div className={`relative h-20 w-20 rounded-2xl bg-white p-3 ring-1 ${q.borderClass} shadow-sm group-hover:scale-110 transition-transform duration-500`}>
-                      <Image
-                        src={q.logo}
-                        alt={q.institution}
-                        fill
-                        className="object-contain p-2"
-                      />
+                {/* Decorative background shape */}
+                <div className={`absolute -right-16 -top-16 w-48 h-48 rounded-full opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-1000 ease-out z-0 pointer-events-none ${q.bgClass} mix-blend-multiply blur-2xl`} />
+
+                <div className="relative z-10">
+                  <div className="flex justify-between items-start mb-10">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-slate-100 rounded-[1.25rem] scale-100 animate-pulse opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className={`relative h-20 w-20 rounded-[1.25rem] bg-white p-3 ring-1 ${q.borderClass} shadow-sm group-hover:scale-110 transition-transform duration-500`}>
+                        <Image
+                          src={q.logo}
+                          alt={q.institution}
+                          fill
+                          className="object-contain p-2"
+                        />
+                      </div>
                     </div>
-                    <div className="flex flex-col items-end gap-2">
-                      <span className={`font-mono text-[11px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full ${q.bgClass} ${q.textClass}`}>
+                    
+                    <div className="flex flex-col items-end gap-2.5">
+                      <span className={`font-mono text-[11px] font-bold uppercase tracking-widest px-4 py-1.5 rounded-full ${q.bgClass} ${q.textClass} ring-1 ring-inset ring-current/20`}>
                         {q.year}
                       </span>
                       {q.highlight && (
-                        <span className="inline-flex items-center gap-1 font-sans text-[10px] font-bold text-amber-700 bg-amber-50 border border-amber-200 px-2 py-1 rounded-md shadow-xs drop-shadow-sm">
-                          <Trophy size={10} weight="fill" />
+                        <span className="flex items-center gap-1.5 font-sans text-[10px] font-bold text-amber-700 bg-linear-to-r from-amber-50 to-orange-50 border border-amber-200/60 shadow-xs px-2.5 py-1 rounded-md">
+                          <Trophy size={12} weight="fill" className="text-amber-500" />
                           {q.highlight}
                         </span>
                       )}
                     </div>
                   </div>
 
-                  <div className="space-y-3">
-                    <h4 className="font-serif text-2xl font-medium text-slate-900 leading-snug">
+                  <div className="space-y-4">
+                    <h4 className="font-serif text-[1.6rem] font-medium text-slate-900 leading-tight group-hover:text-slate-800 transition-colors">
                       {q.degree}
                     </h4>
-                    <p className="font-sans text-[15px] font-light text-slate-600 leading-relaxed">
+                    <p className="font-sans text-[15px] font-light text-slate-600 leading-relaxed border-l-[3px] border-slate-200 pl-4 group-hover:border-slate-400 transition-colors duration-300">
                       {q.institution}
                     </p>
                   </div>
                 </div>
 
                 {q.thesis && (
-                  <div className="pt-6 mt-8 border-t border-slate-100 relative">
-                    <p className="font-mono text-[10px] uppercase tracking-widest text-slate-400 mb-2 font-bold flex items-center gap-2">
-                      <span className="h-px w-4 bg-slate-300"></span>
-                      Thesis
+                  <div className="pt-8 mt-10 border-t border-slate-100 relative z-10">
+                     <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-400 mb-3 font-semibold flex items-center gap-3">
+                      <span className="w-1.5 h-1.5 rounded-full bg-slate-300 group-hover:bg-slate-500 transition-colors duration-500" />
+                      Doctoral Thesis
                     </p>
-                    <p className="font-serif text-slate-600 italic text-[15px] leading-relaxed">
-                      &ldquo;{q.thesis}&rdquo;
+                    <p className="font-serif text-slate-700 italic text-[15px] leading-relaxed relative">
+                      <span className="absolute -left-3 -top-2 text-3xl text-slate-200 font-serif opacity-50 select-none">&ldquo;</span>
+                      {q.thesis}
+                      <span className="absolute -right-3 -bottom-4 text-3xl text-slate-200 font-serif opacity-50 select-none">&rdquo;</span>
                     </p>
                   </div>
                 )}
               </div>
             ))}
           </div>
+
 
         </div>
       </section>
