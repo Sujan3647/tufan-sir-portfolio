@@ -90,7 +90,7 @@ const mastersStudents = [
 
 export default function MentorshipPage() {
   return (
-    <div className="relative min-h-screen bg-[#fafafc] select-none">
+    <div className="relative min-h-screen bg-[#fafafc] select-none overflow-x-hidden w-full">
       <Header />
 
       {/* Ambient background grids */}
@@ -113,8 +113,8 @@ export default function MentorshipPage() {
             Supervising and mentoring doctoral candidates and master&apos;s students in advanced chemical research and materials science.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 mt-12 w-full max-w-2xl">
-            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-2xl p-6 flex-1 shadow-sm flex items-center justify-center gap-4">
+          <div className="flex flex-col md:flex-row flex-wrap items-center justify-center gap-6 mt-12 w-full max-w-2xl">
+            <div className="w-full md:w-auto bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-2xl p-6 flex-1 shadow-sm flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
                <div className="w-12 h-12 rounded-full bg-indigo-50 text-indigo-500 flex items-center justify-center">
                  <GraduationCap size={24} weight="duotone" />
                </div>
@@ -124,7 +124,7 @@ export default function MentorshipPage() {
                  <p className="font-sans text-xs text-slate-500 mt-1">1 Awarded, 2 Ongoing</p>
                </div>
             </div>
-            <div className="bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-2xl p-6 flex-1 shadow-sm flex items-center justify-center gap-4">
+            <div className="w-full md:w-auto bg-white/80 backdrop-blur-sm border border-slate-200/60 rounded-2xl p-6 flex-1 shadow-sm flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
                <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-500 flex items-center justify-center">
                  <UserList size={24} weight="duotone" />
                </div>

@@ -125,7 +125,7 @@ function getIFColor(ifVal: string): string {
 
 export default function IndependentResearchPage() {
   return (
-    <div className="relative min-h-screen bg-[#fafafc]">
+    <div className="relative min-h-screen bg-[#fafafc] overflow-x-hidden w-full">
       <Header />
 
       {/* Background texture */}
@@ -161,7 +161,7 @@ export default function IndependentResearchPage() {
 
                 {/* Image Column */}
                 {pub.image && (
-                  <div className="lg:w-[280px] shrink-0 p-5 lg:py-8 lg:pr-0 lg:pl-0">
+                  <div className="w-full lg:w-[280px] shrink-0 p-5 lg:py-8 lg:pr-0 lg:pl-0">
                     <div className="relative w-full aspect-[4/3] lg:aspect-[3/2.5] rounded-xl overflow-hidden bg-white ring-1 ring-slate-200/60 shadow-sm group-hover:shadow-md group-hover:ring-slate-300/60 transition-all duration-500">
                       <Image
                         src={pub.image}

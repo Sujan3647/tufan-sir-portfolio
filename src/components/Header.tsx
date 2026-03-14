@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { ListIcon, XIcon, CaretDown } from "@phosphor-icons/react";
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "About", href: "/#about" },
   { 
     label: "Research", 

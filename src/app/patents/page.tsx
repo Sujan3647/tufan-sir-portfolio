@@ -45,7 +45,7 @@ const patentsData = [
 
 export default function PatentsPage() {
   return (
-    <div className="relative min-h-screen bg-[#fafafc] select-none">
+    <div className="relative min-h-screen bg-[#fafafc] select-none overflow-x-hidden w-full">
       <Header />
 
       {/* Decorative Grid Background */}
