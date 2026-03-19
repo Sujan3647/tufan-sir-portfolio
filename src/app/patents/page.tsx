@@ -52,7 +52,7 @@ export default function PatentsPage() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#slate-800/5_1px,transparent_1px),linear-gradient(to_bottom,#slate-800/5_1px,transparent_1px)] bg-[size:3rem_3rem] [mask-image:radial-gradient(ellipse_80%_60%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 pointer-events-none z-0" />
 
       {/* Hero Section */}
-      <div className="relative pt-28 pb-14 md:pt-36 md:pb-18 px-6 lg:px-8 max-w-7xl mx-auto z-10">
+      <div className="relative pt-20 pb-10 sm:pt-28 sm:pb-14 md:pt-36 md:pb-18 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto z-10">
         <div className="absolute top-10 left-1/4 w-96 h-96 bg-indigo-50/50 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute top-20 right-1/4 w-80 h-80 bg-emerald-50/50 rounded-full blur-[100px] pointer-events-none" />
         
@@ -61,7 +61,7 @@ export default function PatentsPage() {
             <Certificate size={16} weight="fill" />
             Intellectual Property
           </span>
-          <h1 className="font-serif text-4xl md:text-6xl font-light text-slate-900 tracking-tight leading-tight mb-5">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-6xl font-light text-slate-900 tracking-tight leading-tight mb-5">
             Patents & <span className="font-medium">Innovations</span>
           </h1>
           <p className="font-sans text-base md:text-lg text-slate-500 font-light leading-relaxed max-w-xl">
@@ -71,7 +71,7 @@ export default function PatentsPage() {
       </div>
 
       {/* Patents List */}
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 pb-24 relative z-10 space-y-10 lg:space-y-14">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-24 relative z-10 space-y-8 sm:space-y-10 lg:space-y-14">
         {patentsData.map((patent, idx) => (
           <div 
             key={idx} 
@@ -83,7 +83,7 @@ export default function PatentsPage() {
             <div className="flex flex-col lg:flex-row h-full relative z-10">
               
               {/* Left Content (Data) */}
-              <div className="flex-[1.2] p-8 md:p-12 lg:p-14 flex flex-col justify-center">
+              <div className="flex-[1.2] p-5 sm:p-8 md:p-12 lg:p-14 flex flex-col justify-center">
                 {/* Meta Bar */}
                 <div className="flex flex-wrap items-center gap-4 mb-6 md:mb-8">
                   <span className={`inline-flex items-center gap-2 font-mono text-[11px] font-bold uppercase tracking-[0.15em] px-4 py-2 rounded-full ${patent.bgLight} ${patent.textDark} border ${patent.borderColor} shadow-xs`}>
@@ -96,7 +96,7 @@ export default function PatentsPage() {
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-[1.5rem] md:text-[2.2rem] font-medium text-slate-900 leading-tight mb-8 group-hover:text-slate-800 transition-colors">
+                <h3 className="font-serif text-xl sm:text-[1.5rem] md:text-[2.2rem] font-medium text-slate-900 leading-tight mb-6 sm:mb-8 group-hover:text-slate-800 transition-colors">
                   {patent.title}
                 </h3>
 

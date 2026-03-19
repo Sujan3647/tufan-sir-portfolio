@@ -7,13 +7,13 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative bg-white/60 backdrop-blur-sm pt-10 pb-8 lg:pt-16 lg:pb-12 overflow-hidden" id="about">
+    <section className="relative bg-white/60 backdrop-blur-sm pt-6 pb-6 sm:pt-10 sm:pb-8 lg:pt-16 lg:pb-12 overflow-hidden" id="about">
       <AnimatedChemBackground />
       {/* Subtle Background Pattern */}
       <div className="absolute inset-0 z-0 bg-transparent opacity-30"></div>
       
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-20">
           
           {/* Profile Image Column (Left on Desktop) */}
           <div className="w-full lg:w-1/3 flex justify-center lg:justify-end">
@@ -35,17 +35,17 @@ export default function HeroSection() {
           {/* Content Column (Right on Desktop) */}
           <div className="w-full lg:w-2/3 text-center lg:text-left">
             
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-navy tracking-tight mb-4">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-navy tracking-tight mb-4">
               Dr. Tufan Singha Mahapatra
             </h1>
             
-            <div className="text-lg sm:text-xl font-medium text-primary mb-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
+            <div className="text-base sm:text-lg md:text-xl font-medium text-primary mb-6 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 divide-y sm:divide-y-0 sm:divide-x divide-gray-200">
               <span className="font-serif italic">Assistant Professor (Chemistry)</span>
               <span className="hidden sm:inline-block text-gray-300">|</span>
               <span className="font-serif italic">Convener, Institution’s Innovation Council</span>
             </div>
 
-            <p className="font-heading text-lg sm:text-xl text-text-body max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8 tracking-wide">
+            <p className="font-heading text-base sm:text-lg md:text-xl text-text-body max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-6 sm:mb-8 tracking-wide">
               Based at <strong className="text-navy font-bold font-serif">ICFAI University Tripura</strong>. 
               Dedicated to advancing the field of <span className="font-sans font-medium text-primary bg-primary/5 px-1 rounded">Supramolecular Chemistry</span> and <span className="font-sans font-medium text-secondary bg-secondary/5 px-1 rounded">Materials Science</span> through innovative research and mentorship.
             </p>
@@ -59,7 +59,7 @@ export default function HeroSection() {
                  <div className="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300">
                    <EnvelopeSimpleIcon size={20} weight="duotone" />
                  </div>
-                 <span className="text-sm font-semibold text-navy group-hover:text-primary transition-colors tracking-tight">tsmahapatra@iutripura.edu.in</span>
+                 <span className="text-xs sm:text-sm font-semibold text-navy group-hover:text-primary transition-colors tracking-tight break-all sm:break-normal">tsmahapatra@iutripura.edu.in</span>
               </a>
 
               {/* Divider */}

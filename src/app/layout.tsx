@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, EB_Garamond, Space_Grotesk, JetBrains_Mono, Playfair_Display, DM_Sans } from "next/font/google"; 
+import Footer from "@/components/Footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -21,8 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${ebGaramond.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} ${playfair.variable} ${dmSans.variable}`}>
-      <body className="antialiased font-sans overflow-x-hidden max-w-[100vw] text-slate-900 bg-[#fafafc] selection:bg-indigo-100 selection:text-indigo-900">
-        {children}
+      <body className="antialiased font-sans flex flex-col min-h-screen overflow-x-hidden max-w-[100vw] text-slate-900 bg-[#fafafc] selection:bg-indigo-100 selection:text-indigo-900">
+        <main className="flex-grow">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

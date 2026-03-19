@@ -44,7 +44,7 @@ const publicationStats = [
 
 export default function PublicationsSection() {
   return (
-    <section className="relative overflow-hidden bg-white/80 backdrop-blur-sm py-24 md:py-32 border-t border-slate-100" id="publications">
+    <section className="relative overflow-hidden bg-white/80 backdrop-blur-sm py-16 sm:py-24 md:py-32 border-t border-slate-100" id="publications">
       {/* Animated General Science Background */}
       <PubScienceAnimation />
 
@@ -54,7 +54,7 @@ export default function PublicationsSection() {
       <div className="mx-auto max-w-7xl px-6 relative z-10">
 
         {/* Section Header */}
-        <div className="mb-20 grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+        <div className="mb-12 sm:mb-20 grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-end">
           <div className="md:col-span-8">
             <div className="flex items-center gap-4 mb-6">
               <span className="h-px w-12 bg-slate-300"></span>
@@ -62,7 +62,7 @@ export default function PublicationsSection() {
                 Research Output
               </span>
             </div>
-            <h2 className="font-serif text-4xl lg:text-5xl lg:leading-tight font-light text-slate-900 tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl lg:leading-tight font-light text-slate-900 tracking-tight">
               Academic <span className="font-medium">Publications & Patents</span>
             </h2>
           </div>
@@ -76,15 +76,15 @@ export default function PublicationsSection() {
         {/* Minimalist Editorial Stats Grid */}
         <div className="bg-white/80 backdrop-blur-sm border border-slate-200/70 shadow-xs rounded-2xl overflow-hidden relative">
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-slate-100/80">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-5 divide-y sm:divide-y-0 sm:divide-x divide-slate-100/80">
             {publicationStats.map((stat, idx) => (
               <div
                 key={idx}
-                className={`group relative p-8 md:p-10 flex flex-col justify-between bg-transparent ${stat.hoverBg} transition-colors duration-500 overflow-hidden`}
+                className={`group relative p-6 sm:p-8 md:p-10 flex flex-col justify-between bg-transparent ${stat.hoverBg} transition-colors duration-500 overflow-hidden`}
               >
                 {/* Number */}
-                <div className="mb-12 transition-transform duration-700 ease-out group-hover:-translate-y-1 relative z-10">
-                  <h4 className={`text-6xl md:text-7xl font-serif font-light tracking-tighter bg-clip-text text-transparent ${stat.textGradient} opacity-90 drop-shadow-sm`}>
+                <div className="mb-6 sm:mb-12 transition-transform duration-700 ease-out group-hover:-translate-y-1 relative z-10">
+                  <h4 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-serif font-light tracking-tighter bg-clip-text text-transparent ${stat.textGradient} opacity-90 drop-shadow-sm`}>
                     {stat.value}
                   </h4>
                 </div>

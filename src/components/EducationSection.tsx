@@ -85,7 +85,7 @@ export default function EducationSection() {
           1. PROFESSIONAL EXPERIENCE SECTION
           ========================================= */}
       <section
-        className="relative overflow-hidden bg-white/80 backdrop-blur-sm py-24 md:py-32"
+        className="relative overflow-hidden bg-white/80 backdrop-blur-sm py-16 sm:py-24 md:py-32"
         id="experience"
       >
         {/* Detailed chemistry floating animation */}
@@ -95,16 +95,16 @@ export default function EducationSection() {
         <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-slate-300 to-transparent opacity-50" />
 
         {/* Soft Modern Ambient Background */}
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-200 h-150 bg-indigo-50/50 rounded-full blur-[120px] pointer-events-none z-[-1]" />
-        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-150 h-150 bg-sky-50/50 rounded-full blur-[120px] pointer-events-none z-[-1]" />
+        <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-[800px] h-[600px] bg-indigo-50/50 rounded-full blur-[120px] pointer-events-none z-[-1]" />
+        <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[600px] h-[600px] bg-sky-50/50 rounded-full blur-[120px] pointer-events-none z-[-1]" />
         
         <div className="mx-auto max-w-7xl px-6 relative z-10">
           
-          <div className="mb-20 flex flex-col items-center justify-center text-center">
+          <div className="mb-12 sm:mb-20 flex flex-col items-center justify-center text-center">
             <span className="font-mono text-xs font-bold tracking-[0.2em] uppercase text-indigo-500 mb-4 inline-block border border-indigo-100 bg-indigo-50/50 px-5 py-1.5 rounded-full shadow-sm">
               Professional Journey
             </span>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-slate-900 tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 tracking-tight">
               Work <span className="font-bold text-slate-800">Experience</span>
             </h2>
             <p className="mt-6 font-sans text-lg text-slate-600 font-light max-w-2xl leading-relaxed">
@@ -152,7 +152,7 @@ export default function EducationSection() {
                         </span>
                       </div>
                       
-                      <h3 className="font-serif text-3xl font-medium text-slate-900 leading-tight mb-2 group-hover:text-slate-800 transition-colors">
+                      <h3 className="font-serif text-2xl sm:text-3xl font-medium text-slate-900 leading-tight mb-2 group-hover:text-slate-800 transition-colors">
                         {exp.role}
                       </h3>
                     </div>
@@ -189,7 +189,7 @@ export default function EducationSection() {
           2. EDUCATION & QUALIFICATIONS SECTION
           ========================================= */}
       <section
-        className="relative overflow-hidden bg-slate-50/80 backdrop-blur-sm py-24 md:py-32 border-t border-slate-200/50"
+        className="relative overflow-hidden bg-slate-50/80 backdrop-blur-sm py-16 sm:py-24 md:py-32 border-t border-slate-200/50"
         id="education"
       >
         {/* Animated Math and Chemistry Background Background */}
@@ -205,18 +205,18 @@ export default function EducationSection() {
             <span className="font-mono text-xs font-bold tracking-[0.2em] uppercase text-emerald-600 mb-4 inline-block border border-emerald-200 bg-emerald-50/50 px-5 py-1.5 rounded-full shadow-sm">
               Academic Foundation
             </span>
-            <h2 className="font-serif text-4xl lg:text-5xl font-light text-slate-900 tracking-tight">
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-light text-slate-900 tracking-tight">
               Education & <span className="font-bold text-slate-800">Qualifications</span>
             </h2>
           </div>
 
           {/* Premium National Rankings Banner */}
-          <div className="flex justify-center mb-24 relative z-10">
+          <div className="flex justify-center mb-14 sm:mb-24 relative z-10">
             <div className="relative overflow-hidden bg-slate-900 rounded-3xl p-1 w-full max-w-4xl shadow-[0_20px_40px_-12px_rgba(15,23,42,0.4)] group">
               {/* Animated glowing border effect */}
               <div className="absolute inset-0 bg-[conic-gradient(from_0deg_at_50%_50%,rgba(245,158,11,0.1)_0deg,rgba(245,158,11,0.5)_180deg,rgba(245,158,11,0.1)_360deg)] animate-[spin_4s_linear_infinite]" />
               
-              <div className="relative bg-slate-900/95 backdrop-blur-sm rounded-[22px] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-8 h-full">
+              <div className="relative bg-slate-900/95 backdrop-blur-sm rounded-[22px] p-5 sm:p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 h-full">
                 {/* Background graphic */}
                 <div className="absolute -left-12 -bottom-12 opacity-[0.03] transition-transform duration-700 group-hover:scale-110 group-hover:rotate-12 pointer-events-none">
                   <Trophy size={200} weight="fill" className="text-amber-500" />
@@ -228,7 +228,7 @@ export default function EducationSection() {
                     <Trophy size={24} weight="duotone" className="text-amber-400" />
                   </div>
                   <div>
-                    <h4 className="font-serif text-xl sm:text-2xl font-medium text-white tracking-wide">National Excellence</h4>
+                    <h4 className="font-serif text-lg sm:text-xl md:text-2xl font-medium text-white tracking-wide">National Excellence</h4>
                     <p className="font-mono text-[10px] text-amber-500/70 uppercase tracking-widest mt-0.5">Competitive Rankings</p>
                   </div>
                 </div>
@@ -237,14 +237,14 @@ export default function EducationSection() {
                 <div className="hidden md:block w-px h-16 bg-slate-800" />
 
                 {/* Ranks */}
-                <div className="flex items-center gap-8 sm:gap-16 relative z-10 pr-4">
+                <div className="flex items-center gap-6 sm:gap-8 md:gap-16 relative z-10 pr-4">
                   {nationalRanks.map((rank) => (
                     <div key={rank.exam} className="text-center md:text-left flex flex-col justify-center">
                       <p className="font-mono text-[11px] tracking-[0.2em] text-slate-400 uppercase font-bold mb-1.5 flex items-center justify-center md:justify-start gap-2">
                         <span className="w-1 h-1 bg-amber-500 rounded-full" />
                         {rank.exam}
                       </p>
-                      <p className="font-serif text-3xl md:text-4xl font-light tracking-tight text-white group-hover:text-amber-400 transition-colors duration-500">
+                      <p className="font-serif text-2xl sm:text-3xl md:text-4xl font-light tracking-tight text-white group-hover:text-amber-400 transition-colors duration-500">
                         {rank.rank}
                       </p>
                     </div>

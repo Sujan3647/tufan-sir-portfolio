@@ -80,7 +80,7 @@ export default function InvitedTalksPage() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#slate-800/4_1px,transparent_1px),linear-gradient(to_bottom,#slate-800/4_1px,transparent_1px)] bg-[size:3.5rem_3.5rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-30 pointer-events-none z-0" />
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-indigo-50/50 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="pt-24 pb-16 md:pt-36 md:pb-32 max-w-6xl mx-auto px-6 relative z-10">
+      <div className="pt-20 pb-12 sm:pt-24 sm:pb-16 md:pt-36 md:pb-32 max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-start mb-16 md:mb-24">
@@ -88,7 +88,7 @@ export default function InvitedTalksPage() {
             <MicrophoneStage size={16} weight="duotone" />
             Speaking Engagements
           </span>
-          <h1 className="font-serif text-5xl md:text-6xl font-light text-slate-900 tracking-tight leading-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-light text-slate-900 tracking-tight leading-tight">
             Invited <span className="font-semibold text-slate-800">Talks</span> & <br className="hidden md:block"/> Seminars
           </h1>
           <div className="h-px w-24 bg-indigo-200 mt-8" />
@@ -97,17 +97,17 @@ export default function InvitedTalksPage() {
         {/* Timeline Layout */}
         <div className="relative">
           {/* Vertical timeline line */}
-          <div className="absolute top-0 bottom-0 left-[27px] md:left-[35px] w-px bg-slate-200/80" />
+          <div className="absolute top-0 bottom-0 left-[23px] sm:left-[27px] md:left-[35px] w-px bg-slate-200/80" />
 
           <div className="space-y-12 md:space-y-16">
             {talks.map((talk, idx) => (
-              <div key={idx} className="relative pl-16 md:pl-28 group">
+              <div key={idx} className="relative pl-12 sm:pl-16 md:pl-28 group">
                 
                 {/* Timeline Node */}
-                <div className={`absolute left-[19px] md:left-[27px] top-1.5 w-[17px] h-[17px] rounded-full border-4 border-[#fafafc] ${talk.accent} shadow-sm group-hover:scale-125 transition-transform duration-300 z-10`} />
+                <div className={`absolute left-[15px] sm:left-[19px] md:left-[27px] top-1.5 w-[17px] h-[17px] rounded-full border-4 border-[#fafafc] ${talk.accent} shadow-sm group-hover:scale-125 transition-transform duration-300 z-10`} />
 
                 {/* Content Block */}
-                <div className="bg-white/70 backdrop-blur-xl border border-slate-200/60 rounded-3xl p-6 md:p-8 lg:p-10 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500">
+                <div className="bg-white/70 backdrop-blur-xl border border-slate-200/60 rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 shadow-[0_4px_20px_rgb(0,0,0,0.03)] hover:shadow-[0_12px_30px_rgb(0,0,0,0.06)] hover:-translate-y-1 transition-all duration-500">
                   
                   {/* Meta Tags */}
                   <div className="flex flex-wrap items-center gap-3 mb-4">
@@ -125,19 +125,19 @@ export default function InvitedTalksPage() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="font-serif text-xl md:text-2xl font-medium text-slate-900 leading-snug mb-5 group-hover:text-slate-800 transition-colors">
+                  <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-medium text-slate-900 leading-snug mb-4 sm:mb-5 group-hover:text-slate-800 transition-colors">
                     {talk.topic}
                   </h3>
 
                   {/* Event & Location Info */}
                   <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 pt-5 border-t border-slate-100/80">
-                    <div className="flex items-start gap-2 max-w-[50%]">
+                    <div className="flex items-start gap-2 w-full md:max-w-[50%]">
                       <PresentationChart size={16} className="text-slate-400 mt-0.5 shrink-0" weight="duotone" />
                       <p className="font-sans text-[13px] md:text-sm text-slate-600 leading-relaxed">
                         {talk.event}
                       </p>
                     </div>
-                    <div className="flex items-start gap-2 flex-1">
+                    <div className="flex items-start gap-2 w-full flex-1">
                       <Buildings size={16} className="text-slate-400 mt-0.5 shrink-0" weight="duotone" />
                       <p className="font-sans text-[13px] md:text-sm font-medium text-slate-700 leading-relaxed">
                         {talk.organization}
