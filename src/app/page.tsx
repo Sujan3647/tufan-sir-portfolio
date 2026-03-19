@@ -5,6 +5,7 @@ import BioSection from "@/components/BioSection";
 import EducationSection from "@/components/EducationSection";
 import PublicationsSection from "@/components/PublicationsSection";
 import ChemicalBackground from "@/components/ChemicalBackground";
+import TeamSection from "@/components/TeamSection";
 import ContactSection from "@/components/ContactSection";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <BioSection />
       <EducationSection />
       <PublicationsSection />
+      <TeamSection />
       <ContactSection />
     </div>
   );
