@@ -46,8 +46,7 @@ export default function HeroSection() {
             </div>
 
             <p className="font-heading text-base sm:text-lg md:text-xl text-text-body max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-6 sm:mb-8 tracking-wide">
-              Based at <strong className="text-navy font-bold font-serif">ICFAI University Tripura</strong>. 
-              Dedicated to advancing the field of <span className="font-sans font-medium text-primary bg-primary/5 px-1 rounded">Supramolecular Chemistry</span> and <span className="font-sans font-medium text-secondary bg-secondary/5 px-1 rounded">Materials Science</span> through innovative research and mentorship.
+              Dedicated to advancing the field of <span className="font-sans font-medium text-primary bg-primary/5 px-1 rounded">Coordination Chemistry</span>, <span className="font-sans font-medium text-secondary bg-secondary/5 px-1 rounded">Supramolecular Chemistry</span> and <span className="font-sans font-medium text-primary bg-primary/5 px-1 rounded">Materials Chemistry</span> through innovative research and mentorship.
             </p>
 
             {/* Email & Social — Single Row */}

@@ -245,7 +245,7 @@ export default function MentorshipPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-32 relative z-10">
         <div className="mb-14 flex items-center gap-6">
           <h2 className="font-serif text-2xl sm:text-4xl font-medium text-slate-900 flex items-center gap-3">
-            Master&apos;s Dissertations
+            On Going Msc Students
           </h2>
           <div className="h-px flex-1 bg-gradient-to-r from-slate-200 to-transparent" />
         </div>

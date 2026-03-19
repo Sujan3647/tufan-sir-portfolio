@@ -6,7 +6,7 @@ const interests = [
   {
     id: "01",
     area: "Synthetic Chemistry",
-    title: "Coordination Polymer Design",
+    title: "Coordination Complex Design",
     description: "Strategic synthesis of transition (3d/4d) and lanthanide (4f) metal-containing complexes using meticulously prepared ligands to build novel coordination architectures."
   },
   {
